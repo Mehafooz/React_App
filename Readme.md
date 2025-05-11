@@ -164,3 +164,5 @@ then we need to do the named export means
 bef the const add export
 expotr const a
 export const b
+--------------------------------------------------------
+interactions in react like clicks etc

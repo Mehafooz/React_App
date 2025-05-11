@@ -1,531 +1,521 @@
-let resList=[{
-    "id": "623300",
-    "name": "Paradise Biryani",
-    "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2025/4/21/ed5543be-2478-4bc0-bbb8-b38869aabfc9_623300.jpg",
-    "locality": "Sai Nagar",
-    "areaName": "Patinata",
-    "costForTwo": "₹400 for two",
-    "cuisines": [
-        "Biryani",
-        "Kebabs",
-        "North Indian",
-        "Hyderabadi"
+let resList = [
+  {
+    id: "623300",
+    name: "Paradise Biryani",
+    cloudinaryImageId:
+      "RX_THUMBNAIL/IMAGES/VENDOR/2025/4/21/ed5543be-2478-4bc0-bbb8-b38869aabfc9_623300.jpg",
+    locality: "Sai Nagar",
+    areaName: "Patinata",
+    costForTwo: "₹400 for two",
+    cuisines: ["Biryani", "Kebabs", "North Indian", "Hyderabadi"],
+    avgRating: 4.2,
+    parentId: "700",
+    avgRatingString: "4.2",
+    totalRatingsString: "4.2K+",
+    promoted: true,
+    adTrackingId:
+      "cid=29009016~p=0~adgrpid=29009016#ag1~mp=SWIGGY_IN~bl=FOOD~aet=RESTAURANT~aeid=623300~plpr=COLLECTION~eid=6a94f79c-a6ac-49e9-b32c-74fd0fe65f15~srvts=1746952768928~collid=83639",
+    sla: {
+      deliveryTime: 29,
+      lastMileTravel: 5.6,
+      serviceability: "SERVICEABLE",
+      slaString: "25-30 mins",
+      lastMileTravelString: "5.6 km",
+      iconType: "ICON_TYPE_EMPTY",
+    },
+    availability: {
+      nextCloseTime: "2025-05-11 23:00:00",
+      opened: true,
+    },
+    badges: {},
+    isOpen: true,
+    type: "F",
+    badgesV2: {
+      entityBadges: {
+        textBased: {},
+        imageBased: {},
+        textExtendedBadges: {},
+      },
+    },
+    aggregatedDiscountInfoV3: {
+      header: "ITEMS",
+      subHeader: "AT ₹249",
+      logoCtx: {
+        text: "BENEFITS",
+      },
+    },
+    orderabilityCommunication: {
+      title: {},
+      subTitle: {},
+      message: {},
+      customIcon: {},
+      commsStyling: {},
+    },
+    differentiatedUi: {
+      displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+      differentiatedUiMediaDetails: {
+        mediaType: "ADS_MEDIA_ENUM_IMAGE",
+        lottie: {},
+        video: {},
+      },
+    },
+    reviewsSummary: {},
+    displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+    restaurantOfferPresentationInfo: {},
+    externalRatings: {
+      aggregatedRating: {
+        rating: "--",
+      },
+    },
+    ratingsDisplayPreference: "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY",
+    campaignId: "29009016",
+  },
+  {
+    id: "80777",
+    name: "Hotel Raj Towers",
+    cloudinaryImageId: "mcxdk3emrznvk4gczw10",
+    locality: "Governor Peta",
+    areaName: "Governor Peta",
+    costForTwo: "₹500 for two",
+    cuisines: ["Biryani", "Chinese", "Tandoor"],
+    avgRating: 4.3,
+    parentId: "101299",
+    avgRatingString: "4.3",
+    totalRatingsString: "11K+",
+    sla: {
+      deliveryTime: 29,
+      lastMileTravel: 3,
+      serviceability: "SERVICEABLE",
+      slaString: "25-30 mins",
+      lastMileTravelString: "3.0 km",
+      iconType: "ICON_TYPE_EMPTY",
+    },
+    availability: {
+      nextCloseTime: "2025-05-11 23:30:00",
+      opened: true,
+    },
+    badges: {},
+    isOpen: true,
+    type: "F",
+    badgesV2: {
+      entityBadges: {
+        imageBased: {},
+        textExtendedBadges: {},
+        textBased: {},
+      },
+    },
+    aggregatedDiscountInfoV3: {
+      header: "₹125 OFF",
+      subHeader: "ABOVE ₹249",
+      discountTag: "FLAT DEAL",
+      logoCtx: {
+        text: "BENEFITS",
+      },
+    },
+    orderabilityCommunication: {
+      title: {},
+      subTitle: {},
+      message: {},
+      customIcon: {},
+      commsStyling: {},
+    },
+    differentiatedUi: {
+      displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+      differentiatedUiMediaDetails: {
+        mediaType: "ADS_MEDIA_ENUM_IMAGE",
+        lottie: {},
+        video: {},
+      },
+    },
+    reviewsSummary: {},
+    displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+    restaurantOfferPresentationInfo: {},
+    externalRatings: {
+      aggregatedRating: {
+        rating: "4.0",
+        ratingCount: "750",
+      },
+      source: "GOOGLE",
+      sourceIconImageId: "v1704440323/google_ratings/rating_google_tag",
+    },
+    ratingsDisplayPreference: "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY",
+  },
+  {
+    id: "652753",
+    name: "Venapusa home foods",
+    cloudinaryImageId:
+      "FOOD_CATALOG/IMAGES/CMS/2025/3/25/8ae77765-7a4b-4074-b81f-430f1d9c2e91_1864da40-01b3-4df5-983f-4d5837c049bd.JPG",
+    locality: "New Postal colony",
+    areaName: "Vijayawada",
+    costForTwo: "₹150 for two",
+    cuisines: [
+      "South Indian",
+      "Chinese",
+      "Street Food",
+      "Fast Food",
+      "Healthy Food",
+      "Biryani",
+      "Andhra",
     ],
-    "avgRating": 4.2,
-    "parentId": "700",
-    "avgRatingString": "4.2",
-    "totalRatingsString": "4.2K+",
-    "promoted": true,
-    "adTrackingId": "cid=29009016~p=0~adgrpid=29009016#ag1~mp=SWIGGY_IN~bl=FOOD~aet=RESTAURANT~aeid=623300~plpr=COLLECTION~eid=6a94f79c-a6ac-49e9-b32c-74fd0fe65f15~srvts=1746952768928~collid=83639",
-    "sla": {
-        "deliveryTime": 29,
-        "lastMileTravel": 5.6,
-        "serviceability": "SERVICEABLE",
-        "slaString": "25-30 mins",
-        "lastMileTravelString": "5.6 km",
-        "iconType": "ICON_TYPE_EMPTY"
+    avgRating: 3.7,
+    parentId: "400828",
+    avgRatingString: "3.7",
+    totalRatingsString: "523",
+    promoted: true,
+    adTrackingId:
+      "cid=28578753~p=2~adgrpid=28578753#ag1~mp=SWIGGY_IN~bl=FOOD~aet=RESTAURANT~aeid=652753~plpr=COLLECTION~eid=2409fa39-d374-4b1a-85ab-8daebff674a7~srvts=1746953506637~collid=83639",
+    sla: {
+      deliveryTime: 30,
+      lastMileTravel: 2.7,
+      serviceability: "SERVICEABLE",
+      slaString: "25-30 mins",
+      lastMileTravelString: "2.7 km",
+      iconType: "ICON_TYPE_EMPTY",
     },
-    "availability": {
-        "nextCloseTime": "2025-05-11 23:00:00",
-        "opened": true
+    availability: {
+      nextCloseTime: "2025-05-11 23:59:00",
+      opened: true,
     },
-    "badges": {},
-    "isOpen": true,
-    "type": "F",
-    "badgesV2": {
-        "entityBadges": {
-            "textBased": {},
-            "imageBased": {},
-            "textExtendedBadges": {}
-        }
+    badges: {},
+    isOpen: true,
+    type: "F",
+    badgesV2: {
+      entityBadges: {
+        textBased: {},
+        imageBased: {},
+        textExtendedBadges: {},
+      },
     },
-    "aggregatedDiscountInfoV3": {
-        "header": "ITEMS",
-        "subHeader": "AT ₹249",
-        "logoCtx": {
-            "text": "BENEFITS"
-        }
+    aggregatedDiscountInfoV3: {
+      header: "60% OFF",
+      subHeader: "UPTO ₹120",
+      logoCtx: {
+        text: "BENEFITS",
+      },
     },
-    "orderabilityCommunication": {
-        "title": {},
-        "subTitle": {},
-        "message": {},
-        "customIcon": {},
-        "commsStyling": {}
+    orderabilityCommunication: {
+      title: {},
+      subTitle: {},
+      message: {},
+      customIcon: {},
+      commsStyling: {},
     },
-    "differentiatedUi": {
-        "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-        "differentiatedUiMediaDetails": {
-            "mediaType": "ADS_MEDIA_ENUM_IMAGE",
-            "lottie": {},
-            "video": {}
-        }
+    differentiatedUi: {
+      displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+      differentiatedUiMediaDetails: {
+        mediaType: "ADS_MEDIA_ENUM_IMAGE",
+        lottie: {},
+        video: {},
+      },
     },
-    "reviewsSummary": {},
-    "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-    "restaurantOfferPresentationInfo": {},
-    "externalRatings": {
-        "aggregatedRating": {
-            "rating": "--"
-        }
+    reviewsSummary: {},
+    displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+    restaurantOfferPresentationInfo: {},
+    externalRatings: {
+      aggregatedRating: {
+        rating: "--",
+      },
     },
-    "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY",
-    "campaignId": "29009016"
-},{
-    "id": "80777",
-    "name": "Hotel Raj Towers",
-    "cloudinaryImageId": "mcxdk3emrznvk4gczw10",
-    "locality": "Governor Peta",
-    "areaName": "Governor Peta",
-    "costForTwo": "₹500 for two",
-    "cuisines": [
-        "Biryani",
-        "Chinese",
-        "Tandoor"
+    ratingsDisplayPreference: "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY",
+    campaignId: "28578753",
+  },
+  {
+    id: "731303",
+    name: "Hoskote 4 Am Biryani",
+    cloudinaryImageId:
+      "FOOD_CATALOG/IMAGES/CMS/2025/1/18/2c14df11-6002-49de-8b0a-a00cb3a73209_b6f7bb64-31f2-4f66-b5b9-45ef8640fdf9.JPG",
+    locality: "arundalpet",
+    areaName: "Governorpet",
+    costForTwo: "₹200 for two",
+    cuisines: ["Biryani", "Chinese", "Kebabs"],
+    avgRating: 4.3,
+    parentId: "476532",
+    avgRatingString: "4.3",
+    totalRatingsString: "6.5K+",
+    sla: {
+      deliveryTime: 24,
+      lastMileTravel: 3,
+      serviceability: "SERVICEABLE",
+      slaString: "20-25 mins",
+      lastMileTravelString: "3.0 km",
+      iconType: "ICON_TYPE_EMPTY",
+    },
+    availability: {
+      nextCloseTime: "2025-05-11 23:59:00",
+      opened: true,
+    },
+    badges: {},
+    isOpen: true,
+    type: "F",
+    badgesV2: {
+      entityBadges: {
+        imageBased: {},
+        textExtendedBadges: {},
+        textBased: {},
+      },
+    },
+    aggregatedDiscountInfoV3: {
+      header: "ITEMS",
+      subHeader: "AT ₹99",
+      logoCtx: {
+        text: "BENEFITS",
+      },
+      footerText: "94 DEALS LEFT",
+      secondaryHeaderType: "SECONDARY_HEADER_TYPE_USAGE_LIMIT_OFFER",
+    },
+    orderabilityCommunication: {
+      title: {},
+      subTitle: {},
+      message: {},
+      customIcon: {},
+      commsStyling: {},
+    },
+    differentiatedUi: {
+      displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+      differentiatedUiMediaDetails: {
+        mediaType: "ADS_MEDIA_ENUM_IMAGE",
+        lottie: {},
+        video: {},
+      },
+    },
+    reviewsSummary: {},
+    displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+    restaurantOfferPresentationInfo: {},
+    externalRatings: {
+      aggregatedRating: {
+        rating: "--",
+      },
+    },
+    ratingsDisplayPreference: "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY",
+  },
+  {
+    id: "921693",
+    name: "Hotel Grand Krishna's Restaurant",
+    cloudinaryImageId:
+      "FOOD_CATALOG/IMAGES/CMS/2024/7/9/1cc26fef-ab67-452e-ab88-dfeb9bb14ee8_da386b17-9c68-4e13-b4da-9eddaa1b2072.jpg",
+    locality: "REVENUE WARD 9 ",
+    areaName: "Governorpet",
+    costForTwo: "₹299 for two",
+    cuisines: [
+      "North Indian",
+      "Chinese ",
+      "Tandoor ",
+      "Biryani ",
+      "Beverages ",
     ],
-    "avgRating": 4.3,
-    "parentId": "101299",
-    "avgRatingString": "4.3",
-    "totalRatingsString": "11K+",
-    "sla": {
-        "deliveryTime": 29,
-        "lastMileTravel": 3,
-        "serviceability": "SERVICEABLE",
-        "slaString": "25-30 mins",
-        "lastMileTravelString": "3.0 km",
-        "iconType": "ICON_TYPE_EMPTY"
+    avgRating: 4.8,
+    parentId: "592253",
+    avgRatingString: "4.8",
+    totalRatingsString: "20",
+    promoted: true,
+    adTrackingId:
+      "cid=28583356~p=3~adgrpid=28583356#ag1~mp=SWIGGY_IN~bl=FOOD~aet=RESTAURANT~aeid=921693~plpr=COLLECTION~eid=e92cdecc-9b17-4f00-88dd-1e54338b220e~srvts=1746953506637~collid=83639",
+    sla: {
+      deliveryTime: 33,
+      lastMileTravel: 3,
+      serviceability: "SERVICEABLE",
+      slaString: "30-35 mins",
+      lastMileTravelString: "3.0 km",
+      iconType: "ICON_TYPE_EMPTY",
     },
-    "availability": {
-        "nextCloseTime": "2025-05-11 23:30:00",
-        "opened": true
+    availability: {
+      nextCloseTime: "2025-05-11 23:00:00",
+      opened: true,
     },
-    "badges": {},
-    "isOpen": true,
-    "type": "F",
-    "badgesV2": {
-        "entityBadges": {
-            "imageBased": {},
-            "textExtendedBadges": {},
-            "textBased": {}
-        }
+    badges: {},
+    isOpen: true,
+    type: "F",
+    badgesV2: {
+      entityBadges: {
+        textBased: {},
+        imageBased: {},
+        textExtendedBadges: {},
+      },
     },
-    "aggregatedDiscountInfoV3": {
-        "header": "₹125 OFF",
-        "subHeader": "ABOVE ₹249",
-        "discountTag": "FLAT DEAL",
-        "logoCtx": {
-            "text": "BENEFITS"
-        }
+    aggregatedDiscountInfoV3: {
+      header: "20% OFF",
+      subHeader: "UPTO ₹50",
+      logoCtx: {
+        text: "BENEFITS",
+      },
     },
-    "orderabilityCommunication": {
-        "title": {},
-        "subTitle": {},
-        "message": {},
-        "customIcon": {},
-        "commsStyling": {}
+    orderabilityCommunication: {
+      title: {},
+      subTitle: {},
+      message: {},
+      customIcon: {},
+      commsStyling: {},
     },
-    "differentiatedUi": {
-        "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-        "differentiatedUiMediaDetails": {
-            "mediaType": "ADS_MEDIA_ENUM_IMAGE",
-            "lottie": {},
-            "video": {}
-        }
+    differentiatedUi: {
+      displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+      differentiatedUiMediaDetails: {
+        mediaType: "ADS_MEDIA_ENUM_IMAGE",
+        lottie: {},
+        video: {},
+      },
     },
-    "reviewsSummary": {},
-    "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-    "restaurantOfferPresentationInfo": {},
-    "externalRatings": {
-        "aggregatedRating": {
-            "rating": "4.0",
-            "ratingCount": "750"
+    reviewsSummary: {},
+    displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+    restaurantOfferPresentationInfo: {},
+    externalRatings: {
+      aggregatedRating: {
+        rating: "--",
+      },
+    },
+    ratingsDisplayPreference: "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY",
+    campaignId: "28583356",
+  },
+  {
+    id: "68615",
+    name: "Silver Dum Biryani - Original",
+    cloudinaryImageId: "rlyepihgnuxcs74qjitv",
+    locality: "Patamata",
+    areaName: "Gurunanak Colony",
+    costForTwo: "₹300 for two",
+    cuisines: ["Biryani", "Chinese", "Seafood"],
+    avgRating: 4.5,
+    parentId: "471039",
+    avgRatingString: "4.5",
+    totalRatingsString: "20K+",
+    sla: {
+      deliveryTime: 26,
+      lastMileTravel: 2.5,
+      serviceability: "SERVICEABLE",
+      slaString: "25-30 mins",
+      lastMileTravelString: "2.5 km",
+      iconType: "ICON_TYPE_EMPTY",
+    },
+    availability: {
+      nextCloseTime: "2025-05-11 16:30:00",
+      opened: true,
+    },
+    badges: {
+      imageBadges: [
+        {
+          imageId: "Rxawards/_CATEGORY-Biryani.png",
+          description: "Delivery!",
         },
-        "source": "GOOGLE",
-        "sourceIconImageId": "v1704440323/google_ratings/rating_google_tag"
+      ],
     },
-    "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
-},
-{
-    "id": "652753",
-    "name": "Venapusa home foods",
-    "cloudinaryImageId": "FOOD_CATALOG/IMAGES/CMS/2025/3/25/8ae77765-7a4b-4074-b81f-430f1d9c2e91_1864da40-01b3-4df5-983f-4d5837c049bd.JPG",
-    "locality": "New Postal colony",
-    "areaName": "Vijayawada",
-    "costForTwo": "₹150 for two",
-    "cuisines": [
-        "South Indian",
-        "Chinese",
-        "Street Food",
-        "Fast Food",
-        "Healthy Food",
-        "Biryani",
-        "Andhra"
-    ],
-    "avgRating": 3.7,
-    "parentId": "400828",
-    "avgRatingString": "3.7",
-    "totalRatingsString": "523",
-    "promoted": true,
-    "adTrackingId": "cid=28578753~p=2~adgrpid=28578753#ag1~mp=SWIGGY_IN~bl=FOOD~aet=RESTAURANT~aeid=652753~plpr=COLLECTION~eid=2409fa39-d374-4b1a-85ab-8daebff674a7~srvts=1746953506637~collid=83639",
-    "sla": {
-        "deliveryTime": 30,
-        "lastMileTravel": 2.7,
-        "serviceability": "SERVICEABLE",
-        "slaString": "25-30 mins",
-        "lastMileTravelString": "2.7 km",
-        "iconType": "ICON_TYPE_EMPTY"
-    },
-    "availability": {
-        "nextCloseTime": "2025-05-11 23:59:00",
-        "opened": true
-    },
-    "badges": {},
-    "isOpen": true,
-    "type": "F",
-    "badgesV2": {
-        "entityBadges": {
-            "textBased": {},
-            "imageBased": {},
-            "textExtendedBadges": {}
-        }
-    },
-    "aggregatedDiscountInfoV3": {
-        "header": "60% OFF",
-        "subHeader": "UPTO ₹120",
-        "logoCtx": {
-            "text": "BENEFITS"
-        }
-    },
-    "orderabilityCommunication": {
-        "title": {},
-        "subTitle": {},
-        "message": {},
-        "customIcon": {},
-        "commsStyling": {}
-    },
-    "differentiatedUi": {
-        "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-        "differentiatedUiMediaDetails": {
-            "mediaType": "ADS_MEDIA_ENUM_IMAGE",
-            "lottie": {},
-            "video": {}
-        }
-    },
-    "reviewsSummary": {},
-    "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-    "restaurantOfferPresentationInfo": {},
-    "externalRatings": {
-        "aggregatedRating": {
-            "rating": "--"
-        }
-    },
-    "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY",
-    "campaignId": "28578753"
-},
-{
-    "id": "731303",
-    "name": "Hoskote 4 Am Biryani",
-    "cloudinaryImageId": "FOOD_CATALOG/IMAGES/CMS/2025/1/18/2c14df11-6002-49de-8b0a-a00cb3a73209_b6f7bb64-31f2-4f66-b5b9-45ef8640fdf9.JPG",
-    "locality": "arundalpet",
-    "areaName": "Governorpet",
-    "costForTwo": "₹200 for two",
-    "cuisines": [
-        "Biryani",
-        "Chinese",
-        "Kebabs"
-    ],
-    "avgRating": 4.3,
-    "parentId": "476532",
-    "avgRatingString": "4.3",
-    "totalRatingsString": "6.5K+",
-    "sla": {
-        "deliveryTime": 24,
-        "lastMileTravel": 3,
-        "serviceability": "SERVICEABLE",
-        "slaString": "20-25 mins",
-        "lastMileTravelString": "3.0 km",
-        "iconType": "ICON_TYPE_EMPTY"
-    },
-    "availability": {
-        "nextCloseTime": "2025-05-11 23:59:00",
-        "opened": true
-    },
-    "badges": {},
-    "isOpen": true,
-    "type": "F",
-    "badgesV2": {
-        "entityBadges": {
-            "imageBased": {},
-            "textExtendedBadges": {},
-            "textBased": {}
-        }
-    },
-    "aggregatedDiscountInfoV3": {
-        "header": "ITEMS",
-        "subHeader": "AT ₹99",
-        "logoCtx": {
-            "text": "BENEFITS"
-        },
-        "footerText": "94 DEALS LEFT",
-        "secondaryHeaderType": "SECONDARY_HEADER_TYPE_USAGE_LIMIT_OFFER"
-    },
-    "orderabilityCommunication": {
-        "title": {},
-        "subTitle": {},
-        "message": {},
-        "customIcon": {},
-        "commsStyling": {}
-    },
-    "differentiatedUi": {
-        "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-        "differentiatedUiMediaDetails": {
-            "mediaType": "ADS_MEDIA_ENUM_IMAGE",
-            "lottie": {},
-            "video": {}
-        }
-    },
-    "reviewsSummary": {},
-    "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-    "restaurantOfferPresentationInfo": {},
-    "externalRatings": {
-        "aggregatedRating": {
-            "rating": "--"
-        }
-    },
-    "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
-},
-{
-    "id": "921693",
-    "name": "Hotel Grand Krishna's Restaurant",
-    "cloudinaryImageId": "FOOD_CATALOG/IMAGES/CMS/2024/7/9/1cc26fef-ab67-452e-ab88-dfeb9bb14ee8_da386b17-9c68-4e13-b4da-9eddaa1b2072.jpg",
-    "locality": "REVENUE WARD 9 ",
-    "areaName": "Governorpet",
-    "costForTwo": "₹299 for two",
-    "cuisines": [
-        "North Indian",
-        "Chinese ",
-        "Tandoor ",
-        "Biryani ",
-        "Beverages "
-    ],
-    "avgRating": 4.8,
-    "parentId": "592253",
-    "avgRatingString": "4.8",
-    "totalRatingsString": "20",
-    "promoted": true,
-    "adTrackingId": "cid=28583356~p=3~adgrpid=28583356#ag1~mp=SWIGGY_IN~bl=FOOD~aet=RESTAURANT~aeid=921693~plpr=COLLECTION~eid=e92cdecc-9b17-4f00-88dd-1e54338b220e~srvts=1746953506637~collid=83639",
-    "sla": {
-        "deliveryTime": 33,
-        "lastMileTravel": 3,
-        "serviceability": "SERVICEABLE",
-        "slaString": "30-35 mins",
-        "lastMileTravelString": "3.0 km",
-        "iconType": "ICON_TYPE_EMPTY"
-    },
-    "availability": {
-        "nextCloseTime": "2025-05-11 23:00:00",
-        "opened": true
-    },
-    "badges": {},
-    "isOpen": true,
-    "type": "F",
-    "badgesV2": {
-        "entityBadges": {
-            "textBased": {},
-            "imageBased": {},
-            "textExtendedBadges": {}
-        }
-    },
-    "aggregatedDiscountInfoV3": {
-        "header": "20% OFF",
-        "subHeader": "UPTO ₹50",
-        "logoCtx": {
-            "text": "BENEFITS"
-        }
-    },
-    "orderabilityCommunication": {
-        "title": {},
-        "subTitle": {},
-        "message": {},
-        "customIcon": {},
-        "commsStyling": {}
-    },
-    "differentiatedUi": {
-        "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-        "differentiatedUiMediaDetails": {
-            "mediaType": "ADS_MEDIA_ENUM_IMAGE",
-            "lottie": {},
-            "video": {}
-        }
-    },
-    "reviewsSummary": {},
-    "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-    "restaurantOfferPresentationInfo": {},
-    "externalRatings": {
-        "aggregatedRating": {
-            "rating": "--"
-        }
-    },
-    "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY",
-    "campaignId": "28583356"
-},
-{
-    "id": "68615",
-    "name": "Silver Dum Biryani - Original",
-    "cloudinaryImageId": "rlyepihgnuxcs74qjitv",
-    "locality": "Patamata",
-    "areaName": "Gurunanak Colony",
-    "costForTwo": "₹300 for two",
-    "cuisines": [
-        "Biryani",
-        "Chinese",
-        "Seafood"
-    ],
-    "avgRating": 4.5,
-    "parentId": "471039",
-    "avgRatingString": "4.5",
-    "totalRatingsString": "20K+",
-    "sla": {
-        "deliveryTime": 26,
-        "lastMileTravel": 2.5,
-        "serviceability": "SERVICEABLE",
-        "slaString": "25-30 mins",
-        "lastMileTravelString": "2.5 km",
-        "iconType": "ICON_TYPE_EMPTY"
-    },
-    "availability": {
-        "nextCloseTime": "2025-05-11 16:30:00",
-        "opened": true
-    },
-    "badges": {
-        "imageBadges": [
+    isOpen: true,
+    aggregatedDiscountInfoV2: {},
+    type: "F",
+    badgesV2: {
+      entityBadges: {
+        textBased: {},
+        imageBased: {
+          badgeObject: [
             {
-                "imageId": "Rxawards/_CATEGORY-Biryani.png",
-                "description": "Delivery!"
-            }
-        ]
-    },
-    "isOpen": true,
-    "aggregatedDiscountInfoV2": {},
-    "type": "F",
-    "badgesV2": {
-        "entityBadges": {
-            "textBased": {},
-            "imageBased": {
-                "badgeObject": [
-                    {
-                        "attributes": {
-                            "imageId": "Rxawards/_CATEGORY-Biryani.png",
-                            "description": "Delivery!"
-                        }
-                    }
-                ]
+              attributes: {
+                imageId: "Rxawards/_CATEGORY-Biryani.png",
+                description: "Delivery!",
+              },
             },
-            "textExtendedBadges": {}
-        }
-    },
-    "orderabilityCommunication": {
-        "title": {},
-        "subTitle": {},
-        "message": {},
-        "customIcon": {},
-        "commsStyling": {}
-    },
-    "differentiatedUi": {
-        "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-        "differentiatedUiMediaDetails": {
-            "mediaType": "ADS_MEDIA_ENUM_IMAGE",
-            "lottie": {},
-            "video": {}
-        }
-    },
-    "reviewsSummary": {},
-    "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-    "restaurantOfferPresentationInfo": {},
-    "externalRatings": {
-        "aggregatedRating": {
-            "rating": "4.0",
-            "ratingCount": "1.6K+"
+          ],
         },
-        "source": "GOOGLE",
-        "sourceIconImageId": "v1704440323/google_ratings/rating_google_tag"
+        textExtendedBadges: {},
+      },
     },
-    "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
-},
-{
-    "id": "996626",
-    "name": "Bezawada's 4AM Biryani",
-    "cloudinaryImageId": "FOOD_CATALOG/IMAGES/CMS/2024/11/24/bca931fa-c7c2-4f5c-aa4e-a06f89ec9b9f_bb450b80-ced9-48d0-bf81-040c6acd2e8c.jpg",
-    "locality": "Governorpet",
-    "areaName": "Governorpet",
-    "costForTwo": "₹199 for two",
-    "cuisines": [
-        "Biryani"
-    ],
-    "avgRating": 3.9,
-    "parentId": "581341",
-    "avgRatingString": "3.9",
-    "totalRatingsString": "297",
-    "promoted": true,
-    "adTrackingId": "cid=28584379~p=4~adgrpid=28584379#ag1~mp=SWIGGY_IN~bl=FOOD~aet=RESTAURANT~aeid=996626~plpr=COLLECTION~eid=37921c64-31d8-4f80-86ba-d3e8de336dba~srvts=1746953506637~collid=83639",
-    "sla": {
-        "deliveryTime": 32,
-        "lastMileTravel": 6,
-        "serviceability": "SERVICEABLE",
-        "slaString": "30-35 mins",
-        "lastMileTravelString": "6.0 km",
-        "iconType": "ICON_TYPE_EMPTY"
+    orderabilityCommunication: {
+      title: {},
+      subTitle: {},
+      message: {},
+      customIcon: {},
+      commsStyling: {},
     },
-    "availability": {
-        "nextCloseTime": "2025-05-11 18:00:00",
-        "opened": true
+    differentiatedUi: {
+      displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+      differentiatedUiMediaDetails: {
+        mediaType: "ADS_MEDIA_ENUM_IMAGE",
+        lottie: {},
+        video: {},
+      },
     },
-    "badges": {},
-    "isOpen": true,
-    "type": "F",
-    "badgesV2": {
-        "entityBadges": {
-            "textBased": {},
-            "imageBased": {},
-            "textExtendedBadges": {}
-        }
+    reviewsSummary: {},
+    displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+    restaurantOfferPresentationInfo: {},
+    externalRatings: {
+      aggregatedRating: {
+        rating: "4.0",
+        ratingCount: "1.6K+",
+      },
+      source: "GOOGLE",
+      sourceIconImageId: "v1704440323/google_ratings/rating_google_tag",
     },
-    "aggregatedDiscountInfoV3": {
-        "header": "₹100 OFF",
-        "subHeader": "ABOVE ₹249",
-        "discountTag": "FLAT DEAL",
-        "logoCtx": {
-            "text": "BENEFITS"
-        }
+    ratingsDisplayPreference: "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY",
+  },
+  {
+    id: "996626",
+    name: "Bezawada's 4AM Biryani",
+    cloudinaryImageId:
+      "FOOD_CATALOG/IMAGES/CMS/2024/11/24/bca931fa-c7c2-4f5c-aa4e-a06f89ec9b9f_bb450b80-ced9-48d0-bf81-040c6acd2e8c.jpg",
+    locality: "Governorpet",
+    areaName: "Governorpet",
+    costForTwo: "₹199 for two",
+    cuisines: ["Biryani"],
+    avgRating: 3.9,
+    parentId: "581341",
+    avgRatingString: "3.9",
+    totalRatingsString: "297",
+    promoted: true,
+    adTrackingId:
+      "cid=28584379~p=4~adgrpid=28584379#ag1~mp=SWIGGY_IN~bl=FOOD~aet=RESTAURANT~aeid=996626~plpr=COLLECTION~eid=37921c64-31d8-4f80-86ba-d3e8de336dba~srvts=1746953506637~collid=83639",
+    sla: {
+      deliveryTime: 32,
+      lastMileTravel: 6,
+      serviceability: "SERVICEABLE",
+      slaString: "30-35 mins",
+      lastMileTravelString: "6.0 km",
+      iconType: "ICON_TYPE_EMPTY",
     },
-    "orderabilityCommunication": {
-        "title": {},
-        "subTitle": {},
-        "message": {},
-        "customIcon": {},
-        "commsStyling": {}
+    availability: {
+      nextCloseTime: "2025-05-11 18:00:00",
+      opened: true,
     },
-    "differentiatedUi": {
-        "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-        "differentiatedUiMediaDetails": {
-            "mediaType": "ADS_MEDIA_ENUM_IMAGE",
-            "lottie": {},
-            "video": {}
-        }
+    badges: {},
+    isOpen: true,
+    type: "F",
+    badgesV2: {
+      entityBadges: {
+        textBased: {},
+        imageBased: {},
+        textExtendedBadges: {},
+      },
     },
-    "reviewsSummary": {},
-    "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-    "isNewlyOnboarded": true,
-    "restaurantOfferPresentationInfo": {},
-    "externalRatings": {
-        "aggregatedRating": {
-            "rating": "--"
-        }
+    aggregatedDiscountInfoV3: {
+      header: "₹100 OFF",
+      subHeader: "ABOVE ₹249",
+      discountTag: "FLAT DEAL",
+      logoCtx: {
+        text: "BENEFITS",
+      },
     },
-    "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY",
-    "campaignId": "28584379"
-}
-
-]
-
+    orderabilityCommunication: {
+      title: {},
+      subTitle: {},
+      message: {},
+      customIcon: {},
+      commsStyling: {},
+    },
+    differentiatedUi: {
+      displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+      differentiatedUiMediaDetails: {
+        mediaType: "ADS_MEDIA_ENUM_IMAGE",
+        lottie: {},
+        video: {},
+      },
+    },
+    reviewsSummary: {},
+    displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+    isNewlyOnboarded: true,
+    restaurantOfferPresentationInfo: {},
+    externalRatings: {
+      aggregatedRating: {
+        rating: "--",
+      },
+    },
+    ratingsDisplayPreference: "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY",
+    campaignId: "28584379",
+  },
+];
 export default resList;

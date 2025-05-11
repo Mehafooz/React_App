@@ -1,56 +1,52 @@
-
 .logo {
   padding: 5px;
   padding-bottom: 2px;
   width: 150px;
   height: auto;
 }
-.header{
+.header {
   display: flex;
   justify-content: space-between;
-  
   border: 1px solid black;
 }
 
-.navItems>ul{
+.navItems > ul {
   display: flex;
   list-style-type: none;
-  
 }
 
-.navItems>ul>li{
+.navItems > ul > li {
   padding: 10px;
-  margin:10px}
+  margin: 10px;
+}
 
-  .res-container{
-
-    display: flex;
-    flex-wrap: wrap;
-  }
-.restaurant-Card-container{
+.res-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+.restaurant-Card-container {
   margin: 5px;
   padding: 5px;
   width: 200px;
   height: 400px;
   border: 1px solid #ffff;
-  box-shadow:gray;
-  
+  box-shadow: gray;
 }
 
-.restaurant-Card-container:hover{
+.restaurant-Card-container:hover {
   border: 1px solid black;
   cursor: pointer;
 }
 
-.Search{
+.Search {
   padding: 10px;
 }
 
+.Utilites {
+  padding: 10px;
+}
 
-
-.card-image{
+.card-image {
   width: 100% !important;
   height: 150px;
-  
-  
 }
