@@ -1,0 +1,17 @@
+{
+  "name": "mehafooz-rect",
+  "version": "1.0.0",
+  "description": "IIt is my personal project",
+  "scripts": {
+    "test": "jest",
+    "start":"parcel index.html",
+    "build":"parcel build index.html"
+  },
+  "author": "mehafooz",
+  "license": "ISC",
+  "dependencies": {
+    "parcel": "^2.14.4",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  }
+}
