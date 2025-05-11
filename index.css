@@ -44,6 +44,8 @@
 
 .Utilites {
   padding: 10px;
+  display: flex;
+  justify-content:space-around;
 }
 
 .card-image {

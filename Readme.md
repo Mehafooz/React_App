@@ -164,5 +164,92 @@ then we need to do the named export means
 bef the const add export
 expotr const a
 export const b
+while import the nammd import we need to  use {}
+like import {a,b} from constanats// name import f
+
+for default no need to use {}
+import react from react// this is deafult
 --------------------------------------------------------
 interactions in react like clicks etc
+  <button
+            className="filter-btn"
+            onClick={() => {/}}</button>
+This is we can use interacctions we can place
+our function inside {}
+
+-----------------------------------
+and we have a listofrest  using that we are showing the 
+res in the ui and
+one button click we are filtering the listofrest
+then after that the ui is not updating even thought
+the listofrest is updatted
+
+here comes the react with react we can do this fast dom manipulation
+lets see how
+
+ // let internalResList =[...resList] //normal js var
+    // state variable- super powerfuuul variable -how?
+    // for that we use hooks.
+    //hook is ntg but a js func which is given to us
+    //by react.
+    //to use them we  need to immport hooks
+    //two imp hooks
+    //1).useState() 2).useEffect()
+    //we will be using useState 80% ofouur time 
+    //2).20% we will uuse useEffect rest others are also
+    //there but we dont use mmuch
+
+    //how we use "useState" 
+    // const [internalResListSt] = useState() //state variable
+    // so here when we call useState() it will return use arr
+    // so we will bind to arry cont [arr]=useState()
+
+    // how to pass default value
+    // const [internalResListSt] = useState([{one res data}]) //state vari with def valuue
+ 
+    //how to use state vari
+    //-- it is like normal variable ntg fancy stuff
+
+    // let [internalResListSt] = useState([...resList])
+
+    //so how to update the internalResListSt
+    let [internalResListSt,setInternalResListSt] = useState([...resList])
+    // here we have setInternalResListSt which is a func
+    //which we use to update the internalResListSt call the func
+    // setInternalResListSt() --means we need topass the filtered list
+    // to the setInternalReslistst(filtLiest)
+
+    //when ever the state var updates then react will rerender with comp
+
+    how we can the setInterReslist()
+    in onclick
+     onClick={() => {
+              console.log("buutttom is clicked");
+              console.log(internalResListSt)
+              let filt = internalResListSt.filter(res=> res.avgRating>4.5)
+              console.log(internalResListSt)
+              setInternalResListSt(filt)
+            }}
+--------------------
+how react is doing this re rendereing fastly ??
+
+1).it keeps data layer in sync with ui layer
+reacts uses reconcialation algorithm came in react 16
+it is also known as react fiber
+7res -> filter -> 3 res in dom
+
+react will create virtual dom of 7 res
+virtual dom is represenation of actual dom. it is obj (means react ele )
+actualy dom means divs images h1
+
+so after the data is updated the
+the difference aglo will find the diff b/w the two virtual doms
+like 7res obj to 3 res obj
+then it will find the diff b/w them that is 4 res
+then it will upadte the dom
+
+so what is so specail
+that is finding the diff b/w two doms is diffucuilt
+and whereas finding the diff b/w two virtual doms is fast thats it
+
+------------------------
