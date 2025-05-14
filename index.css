@@ -52,3 +52,17 @@
   width: 100% !important;
   height: 150px;
 }
+.shimmerCard{
+  width: 200px;
+  height: 250px;
+  margin: 5px;
+  background-color: #f0f0f0;
+}
+.shimmerContainer{
+  display: flex;
+  flex-wrap: wrap;
+}
+.login-button{
+  padding: 10px;
+  margin: 10px;
+}
