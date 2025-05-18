@@ -2,9 +2,13 @@ import RestaurantCard from "./RestaurantCard";
 import resList from "../utils/mockData";
 import { useEffect, useState } from "react";
 import ShimmerComp from "./ShimmerComp";
+import { Link } from "react-router-dom";
+
 const Body = () => {
   let [internalResListSt, setInternalResListSt] = useState([]);
-
+  let [internalFilResListSt, setInternalFilResListSt] = useState([]);
+  
+  let [val,setVal] =useState('');
   useEffect(()=>{
     console.log("use effect called")
     fetchData()
@@ -25,6 +29,7 @@ const Body = () => {
     })
     console.log("fil",res,mppd)
     setInternalResListSt(mppd)
+    setInternalFilResListSt(mppd)
     console.log("json is ",jsonn)
   }
 
@@ -36,8 +41,20 @@ const Body = () => {
   return (
     <div className="body">
       <div className="Search">
-        <input type="text" className="search-box"></input>
-        <button>Search</button>
+        <input type="text" className="search-box" value={val} onChange={(e)=>{
+          console.log(e.target.value)
+          setVal(e.target.value)
+
+        }}></input>
+        <button onClick={()=>{
+          console.log("valuee",val)
+          const filtd= internalResListSt.filter((rs)=>{
+            return rs.name.toLowerCase().includes(val.toLowerCase())
+
+
+          })
+          setInternalFilResListSt(filtd)
+        }}>Search</button>
       </div>
       <hr></hr>
       <div className="Utilites">
@@ -49,7 +66,7 @@ const Body = () => {
               console.log(internalResListSt);
               let filt = internalResListSt.filter((res) => res.avgRating > 4.5);
               console.log(internalResListSt);
-              setInternalResListSt(filt);
+              setInternalFilResListSt(filt);
             }}
           >
             Top Rated Restaurants
@@ -59,7 +76,7 @@ const Body = () => {
           <button
             className="showAll-btn"
             onClick={() => {
-              setInternalResListSt(resList);
+              setInternalFilResListSt(internalResListSt);
             }}
           >
             Show All Restaurants
@@ -67,8 +84,11 @@ const Body = () => {
         </div>
       </div>
       <div className="res-container">
-        {internalResListSt.map((it) => (
-          <RestaurantCard key={it.id} resData={it} />
+        {internalFilResListSt.map((it) => (
+          <Link key={it.id} to={"/restaurant-menu/"+it.id}>
+          <RestaurantCard  resData={it} />
+          </Link>
+          
         ))}
       </div>
     </div>

@@ -1,5 +1,6 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { LOGO_URL } from "../utils/constants";
+import { Link } from "react-router-dom";
 const HeaderComponent = () => {
   const [loginText,setLoginText]=useState('Login');
   const loginMech=()=>{
@@ -11,6 +12,9 @@ const HeaderComponent = () => {
     }
     console.log("working")
   }
+  useEffect(()=>{
+    console.log("react head use effect")
+  },[loginText])
   return (
     <div className="header">
       <div className="logo-container">
@@ -18,9 +22,21 @@ const HeaderComponent = () => {
       </div>
       <div className="navItems">
         <ul>
-          <li>Home</li>
-          <li>About Us</li>
-          <li>Contact Us</li>
+          <li>
+            <Link to="/">
+            Home
+            </Link>
+          </li>
+          <li>
+          <Link to="/about-us">
+            About Us
+          </Link>
+          </li>
+          <li>
+          <Link to="/contact-us">
+            Contact Us
+          </Link>
+          </li>
           <li>Cart</li>
           <button className="login-button" onClick={loginMech}>{loginText}</button>
         </ul>
