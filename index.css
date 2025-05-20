@@ -66,3 +66,14 @@
   padding: 10px;
   margin: 10px;
 }
+
+.user-card{
+  background-color: #f0f0f0;
+  width:300px;
+  padding: 6px;
+  margin:  5px;
+  border: 1px solid black;
+}
+.user-details img{
+  width : 50px
+}
