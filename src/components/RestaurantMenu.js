@@ -2,27 +2,16 @@ import { useEffect, useState } from "react"
 import ShimmerComp from "./ShimmerComp"
 import { useParams } from "react-router-dom"
 import { MENU_URL } from "../utils/constants"
+import useResMenu from "../utils/useResMenu"
 
 
 const RestaurantMenu = ()=>{
-    const [resInfo,setResInfo]=useState(null)
-   
     const {resId}= useParams()
-    console.log("d",resId)
+     const resInfo = useResMenu(resId)
     
-    useEffect(()=>{
-        fetchResMenu()
-    },[])
+   
 
-    const fetchResMenu = async () => {
-      const data = await fetch(
-        MENU_URL
-        +resId
-      );
-      let parsedata = await data.json();
-      console.log("data", parsedata);
-      setResInfo(parsedata)
-    };
+   
 
     if(resInfo === null){
         return (
@@ -31,7 +20,7 @@ const RestaurantMenu = ()=>{
         )
     }
     const{name,totalRatingsString,cuisines,avgRatingString,locality,sla}=resInfo.data.cards[2].card.card.info
-    const {itemCards}=resInfo.data.cards[4].groupedCard.cardGroupMap.REGULAR.cards[2].card.card
+    const itemCards=resInfo.data.cards[4].groupedCard.cardGroupMap.REGULAR.cards[2].card.card.itemCards ?? resInfo.data.cards[4].groupedCard.cardGroupMap.REGULAR.cards[2].card.card.categories[0].itemCards
     console.log("itc",itemCards)
     return (
         <div className="restaurant-menu-card">

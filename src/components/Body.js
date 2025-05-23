@@ -3,6 +3,7 @@ import resList from "../utils/mockData";
 import { useEffect, useState } from "react";
 import ShimmerComp from "./ShimmerComp";
 import { Link } from "react-router-dom";
+import useOnlineStatus from "../utils/useOnlineStatus";
 
 const Body = () => {
   let [internalResListSt, setInternalResListSt] = useState([]);
@@ -33,9 +34,16 @@ const Body = () => {
     console.log("json is ",jsonn)
   }
 
+   const status = useOnlineStatus()
+  if(!status){
+    return (<div>Some thing went wrong!! ,Please check your internet connection.</div>)
+  }
+
   if(internalResListSt.length == 0){
     return <ShimmerComp/>
   }
+  
+ 
 
   
   return (
