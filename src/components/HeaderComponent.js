@@ -19,40 +19,40 @@ const HeaderComponent = () => {
     console.log("react head use effect")
   },[loginText])
   return (
-    <div className="header">
-      <div className="logo-container">
-        <img className="logo" src={LOGO_URL} />
+    <div className="header flex justify-between mb-2 bg-amber-600 shadow-lg" >
+      <div className="logo-container ">
+        <img className="logo w-24" src={LOGO_URL} />
       </div>
-      <div className="navItems">
-        <ul>
-          <li>
+      <div className="navItems flex items-center">
+        <ul className="flex p-4 m-4">
+          <li className="px-4">
             Online Status : {status ? '🟢': '🔴'}
           </li>
-          <li>
+          <li className="px-4">
             <Link to="/">
             Home
             </Link>
           </li>
-          <li>
+          <li className="px-4">
           <Link to="/about-us">
             About Us
           </Link>
           </li>
-          <li>
+          <li className="px-4">
           <Link to="/contact-us">
             Contact Us
           </Link>
           
           </li>
 
-           <li>
+           <li className="px-4">
           <Link to="/grocery">
             Grocery
           </Link>
           
           </li>
-          <li>Cart</li>
-          <button className="login-button" onClick={loginMech}>{loginText}</button>
+          <li className="px-4">Cart</li>
+          <button className="login-button px-4 mx-2" onClick={loginMech}>{loginText}</button>
         </ul>
       </div>
     </div>

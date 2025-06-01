@@ -48,13 +48,13 @@ const Body = () => {
   
   return (
     <div className="body">
-      <div className="Search">
-        <input type="text" className="search-box" value={val} onChange={(e)=>{
+      {/* <div className="Search m-4">
+        <input type="text" className="search-box border border-solid border-black " value={val} onChange={(e)=>{
           console.log(e.target.value)
           setVal(e.target.value)
 
         }}></input>
-        <button onClick={()=>{
+        <button className=" bg-orange-200 m-4 px-4 py-2" onClick={()=>{
           console.log("valuee",val)
           const filtd= internalResListSt.filter((rs)=>{
             return rs.name.toLowerCase().includes(val.toLowerCase())
@@ -63,12 +63,28 @@ const Body = () => {
           })
           setInternalFilResListSt(filtd)
         }}>Search</button>
-      </div>
-      <hr></hr>
-      <div className="Utilites">
-        <div className="filter">
+      </div> */}
+     {/* <hr></hr> */}
+      <div className="Utilites flex justify-between m-2">
+        <div>
+           <input type="text" className="search-box border border-solid border-black rounded-lg" value={val} onChange={(e)=>{
+          console.log(e.target.value)
+          setVal(e.target.value)
+
+        }}></input>
+        <button className="rounded-lg bg-orange-200 m-4 px-4 py-2" onClick={()=>{
+          console.log("valuee",val)
+          const filtd= internalResListSt.filter((rs)=>{
+            return rs.name.toLowerCase().includes(val.toLowerCase())
+
+
+          })
+          setInternalFilResListSt(filtd)
+        }}>Search</button>
+        </div>
+        <div className="filter " >
           <button
-            className="filter-btn"
+            className="filter-btn rounded-lg bg-orange-200 m-4 px-4 py-2 "
             onClick={() => {
               console.log("buutttom is clicked");
               console.log(internalResListSt);
@@ -82,7 +98,7 @@ const Body = () => {
         </div>
         <div className="showAll">
           <button
-            className="showAll-btn"
+            className="showAll-btn rounded-lg bg-orange-200 m-4 px-4 py-2 "
             onClick={() => {
               setInternalFilResListSt(internalResListSt);
             }}
@@ -91,7 +107,12 @@ const Body = () => {
           </button>
         </div>
       </div>
-      <div className="res-container">
+      <div className="mb-4">
+          <hr></hr>
+      </div>
+      
+      
+      <div className="res-container flex flex-wrap">
         {internalFilResListSt.map((it) => (
           <Link key={it.id} to={"/restaurant-menu/"+it.id}>
           <RestaurantCard  resData={it} />
