@@ -1,9 +1,10 @@
 import { styleForCard, CDN_URL } from "../utils/constants";
 
 const RestaurantCard = (props) => {
-  let { name, cuisines, avgRating, cloudinaryImageId, costForTwo } =
+  let { name, cuisines, avgRating, cloudinaryImageId, costForTwo,promoted } =
     props.resData;
   console.log("props", props);
+  console.log("promoted",promoted)
   return (
     <div className="restaurant-Card-container m-4 p-4 w-[270px] min-w-[270px]  rounded bg-zinc-100 hover:bg-zinc-300" >
       <div className="Card-baseLane">
@@ -19,4 +20,17 @@ const RestaurantCard = (props) => {
     </div>
   );
 };
+
+export const RestaurantCardWithLabel =(RestaurantCard)=>{
+  return (props)=>{
+    console.log("propss in card",props)
+    return (
+      <div>
+        <label className=" absolute bg-black text-white mx-4 p-2 rounded-lg">Promoted</label>
+        <RestaurantCard resData = {props.resDatas}/>
+      </div>
+    )
+  }
+
+}
 export default RestaurantCard;

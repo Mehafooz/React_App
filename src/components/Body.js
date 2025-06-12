@@ -1,9 +1,11 @@
-import RestaurantCard from "./RestaurantCard";
+import RestaurantCard ,{RestaurantCardWithLabel}from "./RestaurantCard";
 import resList from "../utils/mockData";
 import { useEffect, useState } from "react";
 import ShimmerComp from "./ShimmerComp";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
+import { userContext } from "../utils/userContext";
+import { useContext } from "react";
 
 const Body = () => {
   let [internalResListSt, setInternalResListSt] = useState([]);
@@ -14,7 +16,11 @@ const Body = () => {
     console.log("use effect called")
     fetchData()
   },[])
+  
+  const usernamee = useContext(userContext)
 
+  console.log("urs",usernamee)
+  const ResCardWithLabel = RestaurantCardWithLabel(RestaurantCard)
   const fetchData = async ()=>{
     const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9352403&lng=77.624532&collection=80451&tags=&sortBy=&filters=&type=rcv2&offset=0&page_type=null")
     // const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9352403&lng=77.624532&collection=83639&tags=layout_CCS_Biryani&sortBy=&filters=&type=rcv2&offset=0&page_type=null")
@@ -115,7 +121,12 @@ const Body = () => {
       <div className="res-container flex flex-wrap">
         {internalFilResListSt.map((it) => (
           <Link key={it.id} to={"/restaurant-menu/"+it.id}>
-          <RestaurantCard  resData={it} />
+            {
+              
+              it.promoted ? <ResCardWithLabel resDatas={it} /> :
+              <RestaurantCard  resData={it} />
+            }
+          
           </Link>
           
         ))}

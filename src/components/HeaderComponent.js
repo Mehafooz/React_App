@@ -1,19 +1,28 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { LOGO_URL } from "../utils/constants";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
+import { userContext } from "../utils/userContext";
 const HeaderComponent = () => {
   const [loginText,setLoginText]=useState('Login');
+  const { loggedInUser, setUserName } = useContext(userContext);
   const loginMech=()=>{
     if(loginText === 'Login'){
       setLoginText("Logout")
+     
+      
     }
     else{
       setLoginText("Login")
+    
     }
     console.log("working")
   }
   const status = useOnlineStatus();
+
+  
+
+ 
 
   useEffect(()=>{
     console.log("react head use effect")
@@ -53,6 +62,7 @@ const HeaderComponent = () => {
           </li>
           <li className="px-4">Cart</li>
           <button className="login-button px-4 mx-2" onClick={loginMech}>{loginText}</button>
+          <li >{loggedInUser}</li>        
         </ul>
       </div>
     </div>
