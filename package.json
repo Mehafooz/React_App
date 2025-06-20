@@ -6,7 +6,7 @@
   "scripts": {
     "test": "jest",
     "start": "parcel index.html",
-    "build": "parcel build index.html --no-cahce",
+    "build": "parcel build index.html",
     "lint": "eslint . --ext .js,.ts",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
