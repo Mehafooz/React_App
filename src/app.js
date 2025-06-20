@@ -82,4 +82,4 @@ const appRoute =createBrowserRouter([
 ])
 
 // root3.render(<AppLayout />);
-root3.render(<RouterProvider  basename="/React_App/" router={appRoute}/>)
+root3.render(<RouterProvider router={appRoute}/>)
