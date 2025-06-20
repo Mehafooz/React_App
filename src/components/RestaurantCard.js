@@ -6,7 +6,7 @@ const RestaurantCard = (props) => {
   console.log("props", props);
   console.log("promoted",promoted)
   return (
-    <div className="restaurant-Card-container m-4 p-4 w-[270px] min-w-[270px]  rounded bg-zinc-100 hover:bg-zinc-300" >
+    <div className="restaurant-Card-container m-4 p-4 w-[270px] min-w-[270px] min-h-[500px] max-h-[500px] rounded bg-zinc-100 hover:bg-zinc-300" >
       <div className="Card-baseLane">
         <div className="card-image-cont">
           <img className="card-image rounded-xl" src={CDN_URL + cloudinaryImageId}></img>

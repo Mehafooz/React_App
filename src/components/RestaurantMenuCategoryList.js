@@ -1,8 +1,11 @@
 import { CDN_URL } from "../utils/constants";
+import { useDispatch } from "react-redux";
+import { addItem } from "../utils/cartSlice";
 
 const RestaurantMenuCategoryList = (props) => {
   let { categoryDetails } = props;
   console.log("ctd", categoryDetails);
+  const dispatch = useDispatch();
   return (
     <div>
       {categoryDetails.map((item) => {
@@ -27,6 +30,22 @@ const RestaurantMenuCategoryList = (props) => {
                 alt={item.card.info.name}
               />
               <button
+                onClick={()=>{
+                  //need to dispatch an action
+
+                  //for dispatch we need to useDispatch hook
+                  // so at the top we create a dispatch var and use it in ou
+                  //func
+
+                  //and we need to import the action as well from the cart slice
+
+                  // and we will pass the item to add item
+
+                  dispatch(addItem(item))
+
+                  // thats it here 3 will be the payload
+
+                }}
                 type="button"
                 className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 bg-black text-white px-2 py-1 rounded shadow hover:bg-blue-600 text-xs sm:text-sm"
                 style={{ minWidth: "50px" }} // optional min width for button

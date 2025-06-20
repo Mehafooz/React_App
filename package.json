@@ -5,15 +5,17 @@
   "scripts": {
     "test": "jest",
     "start": "parcel index.html",
-    "build": "parcel build index.html",
+    "build": "parcel build index.html --no-cahce",
     "lint": "eslint . --ext .js,.ts"
   },
   "author": "mehafooz",
   "license": "ISC",
   "dependencies": {
+    "@reduxjs/toolkit": "^2.8.2",
     "parcel": "^2.14.4",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
+    "react-redux": "^9.2.0",
     "react-router-dom": "^6.22.0"
   },
   "devDependencies": {
