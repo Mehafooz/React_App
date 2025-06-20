@@ -33123,7 +33123,7 @@ const Cart = ()=>{
                             children: "clear cart"
                         }, void 0, false, {
                             fileName: "src/components/cart.js",
-                            lineNumber: 40,
+                            lineNumber: 41,
                             columnNumber: 13
                         }, undefined)
                     ]
@@ -33163,6 +33163,6 @@ $RefreshReg$(_c, "Cart");
 },{"react/jsx-dev-runtime":"dVPUn","react-redux":"hbNxT","../utils/cartSlice":"8EWXN","./RestaurantMenuCategoryList":"5nGIj","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"baeVm":[function(require,module,exports,__globalThis) {
 module.exports = import("./Grocery.390591cb.js").then(()=>module.bundle.root('cz4SJ'));
 
-},{"cz4SJ":"cz4SJ"}]},["7wZbQ","2R06K"], "2R06K", "parcelRequire9446", {}, null, null, "http://localhost:1234")
+},{"cz4SJ":"cz4SJ"}]},["7wZbQ","2R06K"], "2R06K", "parcelRequire6ca3", {}, null, null, "http://localhost:1234")
 
 //# sourceMappingURL=React_App.0f77c784.js.map
