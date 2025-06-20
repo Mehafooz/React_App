@@ -1,0 +1,2 @@
+var e=globalThis.parcelRequire6ca3;(0,e.register)("loR3J",function(r,o){Object.defineProperty(r.exports,"__esModule",{value:!0,configurable:!0}),Object.defineProperty(r.exports,"default",{get:()=>t,set:void 0,enumerable:!0,configurable:!0});var i=e("ayMG0"),t=()=>(0,i.jsxs)("div",{className:"text-center text-2xl font-bold my-4",children:[(0,i.jsx)("div",{children:"This is the place holder for quick grocery service."}),"Coming soon ..."]})});
+//# sourceMappingURL=Grocery.28f35ce2.js.map
