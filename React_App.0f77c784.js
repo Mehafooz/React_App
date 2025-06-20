@@ -849,6 +849,7 @@ const appRoute = (0, _reactRouterDom.createBrowserRouter)([
 ]);
 // root3.render(<AppLayout />);
 root3.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.RouterProvider), {
+    basename: "/React_App/",
     router: appRoute
 }, void 0, false, {
     fileName: "src/app.js",
