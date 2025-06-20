@@ -3,15 +3,15 @@ import { useDispatch } from "react-redux";
 import { addItem } from "../utils/cartSlice";
 
 const RestaurantMenuCategoryList = (props) => {
-  let { categoryDetails } = props;
+  let { categoryDetails,showAddButton = true  } = props;
   console.log("ctd", categoryDetails);
   const dispatch = useDispatch();
   return (
     <div>
-      {categoryDetails.map((item) => {
+      {categoryDetails.map((item,index) => {
         return (
           <div
-            key={item.card.info.id}
+             key={`${item.card.info.id}-${index}`} 
             className="p-2 m-2 text-left border-gray-200 border-b-2 flex justify-between items-center"
           >
             <div className="py-2 w-8/12">
@@ -29,7 +29,7 @@ const RestaurantMenuCategoryList = (props) => {
                 className="w-full"
                 alt={item.card.info.name}
               />
-              <button
+            {showAddButton && ( <button
                 onClick={()=>{
                   //need to dispatch an action
 
@@ -51,7 +51,7 @@ const RestaurantMenuCategoryList = (props) => {
                 style={{ minWidth: "50px" }} // optional min width for button
               >
                 Add +
-              </button>
+              </button>)}
             </div>
           </div>
         );

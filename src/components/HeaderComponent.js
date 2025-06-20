@@ -49,12 +49,12 @@ const HeaderComponent = () => {
             About Us
           </Link>
           </li>
-          <li className="px-4">
+          {/* <li className="px-4">
           <Link to="/contact-us">
             Contact Us
           </Link>
           
-          </li>
+          </li> */}
 
            <li className="px-4">
           <Link to="/grocery">
@@ -62,7 +62,7 @@ const HeaderComponent = () => {
           </Link>
           
           </li>
-          <li className="px-4 font-bold text-l"><Link to="/cart">Cart({cartItems.length})items</Link></li>
+          <li className="px-4 font-bold text-l"><Link to="/cart">Cart ({cartItems.length})</Link></li>
           <button className="login-button px-4 mx-2" onClick={loginMech}>{loginText}</button>
           <li >{loggedInUser}</li>        
         </ul>

@@ -1,28 +1,66 @@
 import RestaurantCard ,{RestaurantCardWithLabel}from "./RestaurantCard";
 import resList from "../utils/mockData";
-import { useEffect, useState } from "react";
+import { useEffect, useState ,useRef} from "react";
 import ShimmerComp from "./ShimmerComp";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
 import { userContext } from "../utils/userContext";
 import { useContext } from "react";
+import LocationSearchBox from "./LocationSearchBox";
 
 const Body = () => {
   let [internalResListSt, setInternalResListSt] = useState([]);
   let [internalFilResListSt, setInternalFilResListSt] = useState([]);
+  const [loc, setLoc] = useState(() => {
+  return localStorage.getItem("user_location_cords") || "lat=13.0843007&lng=80.2704622";
+});
+
   
   let [val,setVal] =useState('');
-  useEffect(()=>{
-    console.log("use effect called")
-    fetchData()
-  },[])
+  // useEffect(()=>{
+  //   const savedLocation = localStorage.getItem("user_location_cords");
+    
+  //    if (loc && loc !== savedLocation) {
+  //     console.log("use effect called")
+  //   console.log("loc",loc)
+  //   fetchData();
+  //   localStorage.setItem("last_loc", loc);
+  // }
+    
+  // },[loc])
+
+//   useEffect(() => {
+//   if (!loc) return;
+
+//   const lastFetchedLoc = localStorage.getItem("last_fetched_location");
+
+//   if (lastFetchedLoc !== loc) {
+//     fetchData();
+//     localStorage.setItem("last_fetched_location", loc);
+//   }
+// }, [loc]);
+
+const prevLoc = useRef(null);
+
+useEffect(() => {
+  if (!loc) return;
+
+  if (prevLoc.current !== loc) {
+    fetchData();
+    prevLoc.current = loc;
+  }
+}, [loc]);
+
   
   const usernamee = useContext(userContext)
 
   console.log("urs",usernamee)
   const ResCardWithLabel = RestaurantCardWithLabel(RestaurantCard)
   const fetchData = async ()=>{
-    const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9352403&lng=77.624532&collection=80451&tags=&sortBy=&filters=&type=rcv2&offset=0&page_type=null")
+    console.log("fetch loc")
+    //  const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9352403&lng=77.624532&collection=80451&tags=&sortBy=&filters=&type=rcv2&offset=0&page_type=null")
+    let url = "https://www.swiggy.com/dapi/restaurants/list/v5?"+loc+"&collection=80451&tags=&sortBy=&filters=&type=rcv2&offset=0&page_type=null"
+    const data = await fetch(url)
     // const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9352403&lng=77.624532&collection=83639&tags=layout_CCS_Biryani&sortBy=&filters=&type=rcv2&offset=0&page_type=null")
     const jsonn = await data.json()
     const datta = await jsonn?.data?.cards
@@ -72,13 +110,26 @@ const Body = () => {
       </div> */}
      {/* <hr></hr> */}
       <div className="Utilites flex justify-between m-2">
-        <div>
-           <input type="text" className="search-box border border-solid border-black rounded-lg" value={val} onChange={(e)=>{
+        <div className="filter-btn rounded-lg m-4 px-4 py-1 ">
+          <LocationSearchBox
+           
+          
+  onLocationSelect={({ lat, lon, address }) => {
+    let cord = "lat="+lat+"&lng="+lon;
+    setLoc(cord)
+    console.log("Latitude:", lat);
+    console.log("Longitude:", lon);
+    console.log("Address:", address);
+  }}
+/>
+        </div>
+         <div>
+           <input type="text" className="search-box  rounded-lg focus:outline-none text-sm text-gray-800" value={val} onChange={(e)=>{
           console.log(e.target.value)
           setVal(e.target.value)
 
-        }}></input>
-        <button className="rounded-lg bg-orange-200 m-4 px-4 py-2" onClick={()=>{
+        }} placeholder="Search for restaurants"></input>
+        <button className="rounded-lg bg-orange-200 m-4 px-4 py-2 hover:bg-orange-400" onClick={()=>{
           console.log("valuee",val)
           const filtd= internalResListSt.filter((rs)=>{
             return rs.name.toLowerCase().includes(val.toLowerCase())
@@ -90,7 +141,7 @@ const Body = () => {
         </div>
         <div className="filter " >
           <button
-            className="filter-btn rounded-lg bg-orange-200 m-4 px-4 py-2 "
+            className="filter-btn rounded-lg bg-orange-200 m-4 px-4 py-2 hover:bg-orange-400 "
             onClick={() => {
               console.log("buutttom is clicked");
               console.log(internalResListSt);
@@ -104,7 +155,7 @@ const Body = () => {
         </div>
         <div className="showAll">
           <button
-            className="showAll-btn rounded-lg bg-orange-200 m-4 px-4 py-2 "
+            className="showAll-btn rounded-lg bg-orange-200 m-4 px-4 py-2 hover:bg-orange-400"
             onClick={() => {
               setInternalFilResListSt(internalResListSt);
             }}

@@ -13,12 +13,12 @@ class AboutUs extends Component{
     render(){
         console.log(" parent component did mount")
          return (<div className="About-us"> 
-    <h2>
+    <h2 className="text-center text-2xl font-bold my-4">
         About Us
     </h2>
     <div>
-        <User/>
-        <UserClas name={"Mehafoozz"}/>
+     
+     
          <UserClas name={"Mehafoozz"}/>
 
 
