@@ -11,7 +11,7 @@ import RestaurantMenu from "./components/RestaurantMenu";
 import { userContext } from "./utils/userContext";
 import { Provider } from "react-redux";
 import appStore from "./utils/appStore";
-import Cart from "./components/cart";
+import Cart from "./components/Cart";
 
 const root3 = ReactDOM.createRoot(document.getElementById("root3"));
 
